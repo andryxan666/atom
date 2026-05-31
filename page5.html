@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Проверка бдительности КГБ</title>
+    <script>
+        function runJsDialog() {
+            alert("Внимание! Вы зашли в закрытый сектор КГБ.");
+            let userName = prompt("Идентифицируйте себя. Введите ваше имя:", "Товарищ");
+            
+            if (userName) {
+                let answer = confirm("Приветствую, " + userName + "! Готовы ли вы пройти тест на знание секретов Предприятия 3826?");
+                
+                if (answer) {
+                    let question = prompt("Где географически находится Предприятие 3826?\n1) В Сибири\n2) В горах Памира\nВведите цифру 1 или 2:");
+                    if (question === "2") {
+                        alert("Отлично, " + userName + "! Ответ верный. Доступ одобрен. Товарищ Сеченов гордится вами!");
+                    } else {
+                        alert("Ответ неверный! Роботы зафиксировали подозрительную активность. Будьте осторожны!");
+                    }
+                } else {
+                    alert("Проверка отменена. Пожалуйста, покиньте охраняемую зону комплекса.");
+                }
+            }
+        }
+    </script>
+</head>
+<body style="background-color: #1e1e1e; color: #ffffff; font-family: Arial, sans-serif; padding: 20px;">
+    <h1 style="color: #e63946;">Сектор 5: Интерактивная проверка бдительности</h1>
+    <p>Для активации диалоговой системы КГБ нажмите на кнопку ниже.</p>
+    
+    <button onclick="runJsDialog()" style="background-color: #e63946; color: white; padding: 12px 25px; border: none; font-size: 16px; font-weight: bold; cursor: pointer; border-radius: 5px;">
+        Запустить диалог
+    </button>
+    
+    <hr style="border-color: #e63946; margin-top: 30px;">
+    <p><a href="index.html" style="color: #a8dadc;">Вернуться на Главную страницу</a></p>
+</body>
+</html>
